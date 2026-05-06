@@ -1,0 +1,913 @@
+
+@article{ WOS:001706262700027,
+Author = {Li, Jinzhe and Pan, Xin and Jia, Yanchao},
+Title = {Patient address parsing via KG-aware contrastive learning and
+   constrained on-prem LLM inference},
+Journal = {SCIENTIFIC REPORTS},
+Year = {2026},
+Volume = {16},
+Number = {1},
+Month = {FEB 9},
+Abstract = {Address parsing seeks to map noisy, abbreviated free-text addresses into
+   standardized hierarchical tuples for large-scale information systems.
+   Existing approaches struggle with semantic and structural ambiguity,
+   hallucination from unconstrained generation, and deployment constraints
+   under privacy and governance requirements. We present AddrKG-LLM, a
+   two-stage framework that combines knowledge-graph (KG)-aware retrieval
+   with schema-restricted large language model (LLM) decoding. First,
+   contrastive learning over multi-view administrative graphs yields node
+   embeddings that retrieve and re-rank a compact Top-K candidate set,
+   thereby bounding the search space while preserving high gold coverage
+   (Recall@K). Second, a candidate-restricted decoder running on-premises
+   produces JSON-compliant outputs, enforcing single-candidate field
+   consistency and alignment with KG priors to improve controllability and
+   policy compliance. Using de-identified real-world records, we evaluate
+   structural consistency via micro-level accuracy
+   (\textbackslash{}documentclass{[}12pt]\{minimal\}
+   \textbackslash{}usepackage\{amsmath\}
+   \textbackslash{}usepackage\{wasysym\}
+   \textbackslash{}usepackage\{amsfonts\}
+   \textbackslash{}usepackage\{amssymb\}
+   \textbackslash{}usepackage\{amsbsy\}
+   \textbackslash{}usepackage\{mathrsfs\}
+   \textbackslash{}usepackage\{upgreek\}
+   \textbackslash{}setlength\{\textbackslash{}oddsidemargin\}\{-69pt\}
+   \textbackslash{}begin\{document\}\$\$A\_\{micro\}\$\$\textbackslash{}end
+   \{document\}) and macro-level accuracy
+   (\textbackslash{}documentclass{[}12pt]\{minimal\}
+   \textbackslash{}usepackage\{amsmath\}
+   \textbackslash{}usepackage\{wasysym\}
+   \textbackslash{}usepackage\{amsfonts\}
+   \textbackslash{}usepackage\{amssymb\}
+   \textbackslash{}usepackage\{amsbsy\}
+   \textbackslash{}usepackage\{mathrsfs\}
+   \textbackslash{}usepackage\{upgreek\}
+   \textbackslash{}setlength\{\textbackslash{}oddsidemargin\}\{-69pt\}
+   \textbackslash{}begin\{document\}\$\$A\_\{macro\}\$\$\textbackslash{}end
+   \{document\}), and assess system properties with Recall@K and latency.
+   Across strong string-matching, sequence-labeling, and generic LLM
+   baselines, AddrKG-LLM delivers consistent gains in
+   \textbackslash{}documentclass{[}12pt]\{minimal\}
+   \textbackslash{}usepackage\{amsmath\}
+   \textbackslash{}usepackage\{wasysym\}
+   \textbackslash{}usepackage\{amsfonts\}
+   \textbackslash{}usepackage\{amssymb\}
+   \textbackslash{}usepackage\{amsbsy\}
+   \textbackslash{}usepackage\{mathrsfs\}
+   \textbackslash{}usepackage\{upgreek\}
+   \textbackslash{}setlength\{\textbackslash{}oddsidemargin\}\{-69pt\}
+   \textbackslash{}begin\{document\}\$\$A\_\{micro\}\$\$\textbackslash{}end
+   \{document\} and \textbackslash{}documentclass{[}12pt]\{minimal\}
+   \textbackslash{}usepackage\{amsmath\}
+   \textbackslash{}usepackage\{wasysym\}
+   \textbackslash{}usepackage\{amsfonts\}
+   \textbackslash{}usepackage\{amssymb\}
+   \textbackslash{}usepackage\{amsbsy\}
+   \textbackslash{}usepackage\{mathrsfs\}
+   \textbackslash{}usepackage\{upgreek\}
+   \textbackslash{}setlength\{\textbackslash{}oddsidemargin\}\{-69pt\}
+   \textbackslash{}begin\{document\}\$\$A\_\{macro\}\$\$\textbackslash{}end
+   \{document\} with a favorable Recall@K. The proposed method consists of
+   three components: (i) multi-view graph aggregation, (ii) a
+   hierarchy-aware self-supervised contrastive objective that derives
+   positives/negatives from administrative relations to align textual and
+   graph embeddings, and (iii) candidate-restricted decoding within the
+   KG-derived Top-K set. Overall, coupling KG-aware retrieval with
+   constrained on-prem LLM decoding yields an accurate, controllable, and
+   deployable solution for noisy-address structuring across domains.},
+Publisher = {NATURE PORTFOLIO},
+Address = {HEIDELBERGER PLATZ 3, BERLIN, 14197, GERMANY},
+Type = {Article},
+Language = {English},
+Affiliation = {Pan, X (Corresponding Author), Civil Aviat Gen Hosp, Informat Ctr, Beijing 100123, Peoples R China.
+   Li, Jinzhe; Pan, Xin; Jia, Yanchao, Civil Aviat Gen Hosp, Informat Ctr, Beijing 100123, Peoples R China.},
+DOI = {10.1038/s41598-026-39348-z},
+Article-Number = {8003},
+ISSN = {2045-2322},
+Keywords = {Address parsing; Knowledge graph; Contrastive learning; LLM},
+Research-Areas = {Science \& Technology - Other Topics},
+Web-of-Science-Categories  = {Multidisciplinary Sciences},
+Author-Email = {mhzyyit@126.com},
+Cited-References = {Akbik A., 2018, P 27 INT C COMP LING, P1649.
+   Cao Y., 2024, LONG PAPERS, V1, P1530.
+   Chen XL, 2019, J PHYS CONF SER, V1187, DOI 10.1088/1742-6596/1187/4/042083.
+   Comber S, 2019, T GIS, V23, P334, DOI 10.1111/tgis.12522.
+   Cruz P, 2022, ISPRS INT J GEO-INF, V11, DOI 10.3390/ijgi11010011.
+   Devlin J, 2019, 2019 CONFERENCE OF THE NORTH AMERICAN CHAPTER OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS: HUMAN LANGUAGE TECHNOLOGIES (NAACL HLT 2019), VOL. 1, P4171.
+   Feng P, 2024, APPL SCI-BASEL, V14, DOI 10.3390/app14146162.
+   Gallifant J, 2024, PLOS DIGIT HEALTH, V3, DOI 10.1371/journal.pdig.0000417.
+   Guo DY, 2025, NATURE, V645, DOI 10.1038/s41586-025-09422-z.
+   Huang L, 2025, ACM T INFORM SYST, V43, DOI 10.1145/3703155.
+   Li H, 2019, 2019 CONFERENCE OF THE NORTH AMERICAN CHAPTER OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS: HUMAN LANGUAGE TECHNOLOGIES (NAACL HLT 2019), VOL. 1, P3421.
+   Li P., 2025, ISPRS INT J GEO-INF, V14.
+   Li YJ, 2007, IEEE T PATTERN ANAL, V29, P1091, DOI 10.1109/TPAMI.2007.1070.
+   Liu C, 2023, T GIS, V27, P859, DOI 10.1111/tgis.13055.
+   Liu WJ, 2020, AAAI CONF ARTIF INTE, V34, P2901.
+   Ma XZ, 2016, PROCEEDINGS OF THE 54TH ANNUAL MEETING OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS, VOL 1, P1064.
+   Panchendrarajan R., 2018, P 32 PACIFIC ASIA C.
+   Reimers N., P 2019 C EMPIRICAL M, P3982.
+   Touvron H., 2023, ARXIV.
+   Wan Z, 2023, 2023 CONFERENCE ON EMPIRICAL METHODS IN NATURAL LANGUAGE PROCESSING, EMNLP 2023, P3534.
+   Wang JP, 2020, INFORMATION, V11, DOI 10.3390/info11090421.
+   Wang YS, 2017, LECT NOTES COMPUT SC, V10569, P231, DOI 10.1007/978-3-319-68783-4\_16.
+   Wu J, 2022, BMC HEALTH SERV RES, V22, DOI 10.1186/s12913-022-08574-2.
+   Xue Y, 2020, STATA J, V20, P805, DOI 10.1177/1536867X20976313.
+   Yang A., 2025, ARXIV.
+   {[}张红伟 Zhang Hongwei], 2022, {[}武汉大学学报. 信息科学版, Geomatics and Information Science of Wuhan University], V47, P665.
+   Zhang HW, 2020, ISPRS INT J GEO-INF, V9, DOI 10.3390/ijgi9120745.
+   Zhang L., 2024, P 2024 13 INT C COMP, P302, DOI DOI 10.1109/ISPA63168.2024.00046.
+   Zhang M., 2023, Appl. Sci., V13.
+   Zhang Yun-tao, 2005, Journal of Zhejiang University (Science), V6A, P49, DOI 10.1631/jzus.2005.A0049.},
+Number-of-Cited-References = {30},
+Times-Cited = {0},
+Usage-Count-Last-180-days = {1},
+Usage-Count-Since-2013 = {1},
+Journal-ISO = {Sci Rep},
+Doc-Delivery-Number = {EO9ND},
+Web-of-Science-Index = {Science Citation Index Expanded (SCI-EXPANDED)},
+Unique-ID = {WOS:001706262700027},
+OA = {Green Submitted, gold},
+DA = {2026-05-06},
+}
+
+@article{ WOS:001275006100001,
+Author = {De Paoli, Flavio and Ciavotta, Michele and Avogadro, Roberto and
+   Hristov, Emil and Borukova, Milena and Petrova-Antonova, Dessislava and
+   Krasteva, Iva},
+Title = {An interactive approach to semantic enrichment with geospatial data},
+Journal = {DATA \& KNOWLEDGE ENGINEERING},
+Year = {2024},
+Volume = {153},
+Month = {SEP},
+Abstract = {The ubiquitous availability of datasets has spurred the utilization of
+   Artificial Intelligence methods and models to extract valuable insights,
+   unearth hidden patterns, and predict future trends. However, the current
+   process of data collection and linking heavily relies on expert
+   knowledge and domain-specific understanding, which engenders substantial
+   costs in terms of both time and financial resources. Therefore,
+   streamlining the data acquisition, harmonization, and enrichment
+   procedures to deliver high-fidelity datasets readily usable for
+   analytics is paramount. This paper explores the capabilities of SemTUI,
+   a comprehensive framework designed to support the enrichment of tabular
+   data by leveraging semantics and user interaction. Utilizing SemTUI, an
+   iterative and interactive approach is proposed to enhance the
+   flexibility, usability and efficiency of geospatial data enrichment. The
+   approach is evaluated through a pilot case study focused on urban
+   planning, with a particular emphasis on geocoding. Using a real-world
+   scenario involving the analysis of kindergarten accessibility within
+   walking distance, the study demonstrates the proficiency of SemTUI in
+   generating precise and semantically enriched location data. The
+   incorporation of human feedback in the enrichment process successfully
+   enhances the quality of the resulting dataset, highlighting SemTUI's
+   potential for broader applications in geospatial analysis and its
+   usability for users with limited expertise in manipulating geospatial
+   data.},
+Publisher = {ELSEVIER},
+Address = {RADARWEG 29, 1043 NX AMSTERDAM, NETHERLANDS},
+Type = {Article},
+Language = {English},
+Affiliation = {De Paoli, F (Corresponding Author), Univ Milano Bicocca, Dipartimento Informat Sistemist \& Comunicaz, Milan, Italy.
+   De Paoli, Flavio; Ciavotta, Michele; Avogadro, Roberto, Univ Milano Bicocca, Dipartimento Informat Sistemist \& Comunicaz, Milan, Italy.
+   Hristov, Emil; Borukova, Milena; Petrova-Antonova, Dessislava; Krasteva, Iva, Sofia Univ St Kliment Ohridski, GATE Inst, Sofia, Bulgaria.},
+DOI = {10.1016/j.datak.2024.102341},
+EarlyAccessDate = {JUL 2024},
+Article-Number = {102341},
+ISSN = {0169-023X},
+EISSN = {1872-6933},
+Keywords = {Data enrichment; SemTUI (Semantic Table Interpretation); Geospatial data
+   enrichment; Data linking; Geocoding; Tabular data; Urban planning; Data
+   integration; Semantic annotation},
+Keywords-Plus = {ACCURACY},
+Research-Areas = {Computer Science},
+Web-of-Science-Categories  = {Computer Science, Artificial Intelligence; Computer Science, Information
+   Systems},
+Author-Email = {flavio.depaoli@unimib.it
+   michele.ciavotta@unimib.it
+   roberto.avogadro@unimib.it
+   emil.hristov@gate-ai.eu
+   milena.borukova@gate-ai.eu
+   dessislava.petrova@gate-ai.eu
+   iva.krasteva@gate-ai.eu},
+Affiliations = {University of Milano-Bicocca; University of Sofia},
+ResearcherID-Numbers = {Petrova-Antonova, Dessislava/R-4742-2016
+   Hristov, Emil/MYR-2045-2025
+   de paoli, flavio/HNS-5433-2023
+   Ciavotta, Michele/AAH-5411-2021},
+ORCID-Numbers = {de paoli, flavio/0000-0002-5047-7371
+   },
+Funding-Acknowledgement = {GATE project - Horizon 2020 WIDESPREAD-2018-2020 TEAMING Phase 2
+   programme {[}857155]; Operational Programme Science and Education for
+   Smart Growth {[}BG05M2OP001-1.003-0002-C01]; EnRichMyData project -
+   European Union's Horizon Europe research and innovation programme
+   {[}101070284]; InterTwino project - National programme ``European
+   Research Networks{''} by the Bulgarian Ministry of Education and Science
+   {[}O1-89/02.04.2021]; Horizon Europe - Pillar II {[}101070284] Funding
+   Source: Horizon Europe - Pillar II},
+Funding-Text = {This research work has been supported by GATE project, funded by the
+   Horizon 2020 WIDESPREAD-2018-2020 TEAMING Phase 2 programme under grant
+   agreement no. 857155, by Operational Programme Science and Education for
+   Smart Growth under Grant Agreement no. BG05M2OP001-1.003-0002-C01, by
+   enRichMyData project, funded by European Union's Horizon Europe research
+   and innovation programme under grant agreement No. 101070284 and by
+   InterTwino project, funded by National programme ``European Research
+   Networks{''} by the Bulgarian Ministry of Education and Science under
+   grant agreement No. O1-89/02.04.2021.},
+Cited-References = {Abdelfattah L., 2022, Transportation Research Procedia, V60, P330, DOI {[}10.1016/j.trpro.2021.12.043, DOI 10.1016/J.TRPRO.2021.12.043, 10.1016/j.trpro.2021.12.043].
+   Avogadro R., 2022, 17 ISWC WORKSH ONT M.
+   Avogadro R, 2023, 2023 IEEE INTERNATIONAL CONFERENCE ON WEB INTELLIGENCE AND INTELLIGENT AGENT TECHNOLOGY, WI-IAT, P142, DOI 10.1109/WI-IAT59888.2023.00025.
+   Bakshi Rahul., 2004, GIS 04, P194, DOI {[}DOI 10.1145/1032222.1032251, 10.1145/1032222.1032251].
+   Cara C., 2023, Tech. Rep..
+   Chaney KE, 2019, GEND ISSUES, V36, P3, DOI 10.1007/s12147-017-9207-8.
+   Christen P., 2004, A probabilistic geocoding system based on a national address file.
+   Christen P., 2005, Communication.
+   Ciavotta M., 2022, TECHNOLOGIES APPL BI, P19.
+   Covington P, 2016, PROCEEDINGS OF THE 10TH ACM CONFERENCE ON RECOMMENDER SYSTEMS (RECSYS'16), P191, DOI 10.1145/2959100.2959190.
+   Cruz P, 2022, ISPRS INT J GEO-INF, V11, DOI 10.3390/ijgi11010011.
+   D'Roza T, 2003, BT TECHNOL J, V21, P20, DOI 10.1023/A:1022491825047.
+   Davis CA, 2007, GEOINFORMATICA, V11, P103, DOI 10.1007/s10707-006-0015-7.
+   De Paoli F., 2019, CEUR Workshop Proceedings, V2456, P209.
+   Gkoulalas-Divanis A, 2009, DATA KNOWL ENG, V68, P431, DOI 10.1016/j.datak.2008.11.003.
+   Harris DR, 2019, IEEE INT CONF BIG DA, P4067, DOI {[}10.1109/bigdata47090.2019.9006234, 10.1109/BigData47090.2019.9006234].
+   Koumarelas I, 2018, ACM J DATA INF QUAL, V10, DOI 10.1145/3232852.
+   Kravets N, 2007, HEALTH PLACE, V13, P293, DOI 10.1016/j.healthplace.2005.08.006.
+   Lane KJ, 2013, ENVIRON HEALTH-GLOB, V12, DOI 10.1186/1476-069X-12-75.
+   Lee K, 2020, APPL SCI-BASEL, V10, DOI 10.3390/app10165628.
+   Leszczynski A, 2016, BIG DATA SOC, V3, P1, DOI 10.1177/2053951716661366.
+   Mennecke B. E., 1996, Proceedings of the Twenty-Ninth Hawaii International Conference on System Sciences, P537, DOI 10.1109/HICSS.1996.493249.
+   Owusu C., 2017, Geospatial Data Science Techniques and Applications, P41, DOI {[}DOI 10.1201/B22052, 10.1201/b22052].
+   Palmonari M., 2023, Tech. Rep..
+   Raj A, 2020, EUROMICRO CONF PROC, P13, DOI 10.1109/SEAA51224.2020.00014.
+   Ripamonti M., 2022, Semtui: a framework for the interactive semantic enrichment of tabular data.
+   Ristoski P, 2016, J WEB SEMANT, V36, P1, DOI 10.1016/j.websem.2016.01.001.
+   Schootman M, 2007, ANN EPIDEMIOL, V17, P464, DOI 10.1016/j.annepidem.2006.10.015.
+   Shan SL, 2020, WORLD WIDE WEB, V23, P2005, DOI 10.1007/s11280-020-00782-2.
+   Udroiu C., 2023, Tech. Rep..
+   Zandbergen PA, 2008, COMPUT ENVIRON URBAN, V32, P214, DOI 10.1016/j.compenvurbsys.2007.11.006.
+   Zhang C, 2022, COMPUT ENVIRON URBAN, V95, DOI 10.1016/j.compenvurbsys.2022.101819.},
+Number-of-Cited-References = {32},
+Times-Cited = {5},
+Usage-Count-Last-180-days = {1},
+Usage-Count-Since-2013 = {3},
+Journal-ISO = {Data Knowl. Eng.},
+Doc-Delivery-Number = {ZJ7Y3},
+Web-of-Science-Index = {Science Citation Index Expanded (SCI-EXPANDED)},
+Unique-ID = {WOS:001275006100001},
+OA = {hybrid},
+DA = {2026-05-06},
+}
+
+@article{ WOS:001720072300001,
+Author = {Huang, Jiachen and Liu, Shuo and Qiao, Yanyou and Wu, Yuang},
+Title = {Gazetteer- and type-enhanced Chinese address parsing BERT with an
+   efficient global pointer},
+Journal = {INTERNATIONAL JOURNAL OF DIGITAL EARTH},
+Year = {2025},
+Volume = {18},
+Number = {2},
+Month = {DEC 31},
+Abstract = {As pivotal geospatial information, address data requires robust parsing
+   to effectively support critical internet-based services, including
+   navigation and e-commerce logistics. Yet, existing deep learning-based
+   Chinese address parsing is still confronted by challenges arising from
+   data annotation scarcity, administrative redistricting, regional
+   variations, and informal expressions. Thus, this study enhances model
+   generalization by leveraging contextual prior knowledge while
+   fundamentally reforming the conventional paradigm that frames address
+   parsing as a sequence labeling task. A Gazetteer- and Type-enhanced BERT
+   with an efficient global pointer (GTBERT-Pointer) is proposed,
+   representing an innovative architecture integrating a pre-trained BERT
+   encoder, plug-and-play gazetteer adapter, type adapter, and enhanced
+   global pointer mechanism. The BERT layer first derives the contextual
+   vector representations of the address sequences. Then, the novel
+   gazetteer and type adapters strategically infuse external gazetteer
+   resources and hierarchical element-type knowledge into deep contextual
+   embeddings. Finally, address parsing is recast as multi-label
+   classification through the efficient global pointer to achieve
+   global-span extraction of element boundaries. Empirical evaluations on
+   recent Chinese address parsing benchmarks demonstrate the
+   state-of-the-art performance of GTBERT-Pointer, surpassing existing
+   approaches across comprehensive metrics.},
+Publisher = {TAYLOR \& FRANCIS LTD},
+Address = {2-4 PARK SQUARE, MILTON PARK, ABINGDON OR14 4RN, OXON, ENGLAND},
+Type = {Article},
+Language = {English},
+Affiliation = {Liu, S (Corresponding Author), Chinese Acad Sci, Aerosp Informat Res Inst, Beijing, Peoples R China.
+   Huang, Jiachen; Liu, Shuo; Qiao, Yanyou; Wu, Yuang, Chinese Acad Sci, Aerosp Informat Res Inst, Beijing, Peoples R China.
+   Huang, Jiachen; Wu, Yuang, Univ Chinese Acad Sci, Beijing, Peoples R China.},
+DOI = {10.1080/17538947.2025.2594917},
+Article-Number = {2594917},
+ISSN = {1753-8947},
+EISSN = {1753-8955},
+Keywords = {BERT; Chinese address parsing; global pointer; knowledge adapter},
+Research-Areas = {Physical Geography; Remote Sensing},
+Web-of-Science-Categories  = {Geography, Physical; Remote Sensing},
+Author-Email = {liushuo@aircas.ac.cn},
+Affiliations = {Chinese Academy of Sciences; Aerospace Information Research Institute,
+   CAS; Chinese Academy of Sciences; University of Chinese Academy of
+   Sciences, CAS},
+Funding-Acknowledgement = {Major Consultation and Evaluation Project of Academic Divisions of the
+   Chinese Academy of Sciences {[}2022-ZW14-Z-027]; the Aerospace
+   Information Research Institute {[}E3E2113201, E3BD111704]; National Key
+   Research and Development Program of China {[}2022YFC3301604]},
+Funding-Text = {This study was jointly supported by the Major Consultation and
+   Evaluation Project of Academic Divisions of the Chinese Academy of
+   Sciences (Grant No. 2022-ZW14-Z-027), the National Key Research and
+   Development Program of China (Grant No. 2022YFC3301604) and the
+   Aerospace Information Research Institute (Grant No. E3E2113201 and Grant
+   No. E3BD111704). (E3E2113201, E3BD111704)},
+Cited-References = {Devlin J, 2019, 2019 CONFERENCE OF THE NORTH AMERICAN CHAPTER OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS: HUMAN LANGUAGE TECHNOLOGIES (NAACL HLT 2019), VOL. 1, P4171.
+   Diao SZ, 2020, FINDINGS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS, EMNLP 2020, P4729.
+   Ding RX, 2023, PROCEEDINGS OF THE 46TH INTERNATIONAL ACM SIGIR CONFERENCE ON RESEARCH AND DEVELOPMENT IN INFORMATION RETRIEVAL, SIGIR 2023, P185, DOI 10.1145/3539618.3591728.
+   Feng Zhu, 2018, Journal of Physics: Conference Series, V1087, DOI {[}10.1088/1742-6596/1087/5/052040, 10.1088/1742-6596/1087/5/052040].
+   Grattafiori A., 2024, ARXIV.
+   Guo HL, 2009, KDD-09: 15TH ACM SIGKDD CONFERENCE ON KNOWLEDGE DISCOVERY AND DATA MINING, P1155.
+   Hammami H., 2024, P 2024 C N AM CHAPTE, P201, DOI {[}https://doi.org/10.18653/v1/2024.naacl-industry.17, DOI 10.18653/V1/2024.NAACL-INDUSTRY.17].
+   Houlsby N., 2019, P 36 INT C MACHINE L, P6.
+   Hu W, 2024, Data Min, P472.
+   Jehangir B., 2023, NATURAL LANGUAGE PRO, V3, DOI {[}10.1016/j.nlp.2023.100017, 10.1016/J.NLP.2023.100017, DOI 10.1016/J.NLP.2023.100017, 10.1016/j.nlp.2023.100017, 10.1016/j.nlp.2023.100017.uRl:https://www.sciencedirect.com/science/article/pii/S2949719123000146, DOI 10.1016/J.NLP.2023.100017.URL:HTTPS://WWW.SCIENCEDIRECT.COM/SCIENCE/ARTICLE/PII/S2949719123000146].
+   Li H, 2019, 2019 CONFERENCE OF THE NORTH AMERICAN CHAPTER OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS: HUMAN LANGUAGE TECHNOLOGIES (NAACL HLT 2019), VOL. 1, P3421.
+   Li HJ, 2023, SCI REP-UK, V13, DOI 10.1038/s41598-023-30355-y.
+   Li K, 2023, FINDINGS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS, ACL 2023, P7124.
+   Li L, 2018, INT J GEOGR INF SCI, V32, P30, DOI 10.1080/13658816.2017.1379084.
+   Li Xiaonan, 2020, {[}No title captured], P6836, DOI {[}DOI 10.18653/V1/2020.ACL-MAIN.611, 10.18653/v1/2020.acl-main.611].
+   Lin Y, 2021, ENVIRON PLAN B-URBAN, V48, P724, DOI 10.1177/2399808319895272.
+   Ling GM, 2023, ISPRS INT J GEO-INF, V12, DOI 10.3390/ijgi12070296.
+   Liu Wei, 2021, P 59 ANN M ASS COMP, V1, P5847, DOI DOI 10.18653/V1/2021.ACL-LONG.454.
+   Liu X, 2021, FINDINGS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS, EMNLP 2021, P2209.
+   Liu Y., 2019, ARXIV.
+   Liu Y., 2023, 2023 4 INT C MACHINE, P5, DOI {[}https://doi.org/10.1145/3650215.3650217, DOI 10.1145/3650215.3650217].
+   Lu Y, 2019, INT C INDOOR POSIT, DOI 10.1109/ipin.2019.8911785.
+   Ma Ruotian, 2020, P 58 ANN M ASS COMP, P5951, DOI DOI 10.18653/V1/2020.ACL-MAIN.528.
+   OpenAI J., 2024, ARXIV.
+   See A, 2017, PROCEEDINGS OF THE 55TH ANNUAL MEETING OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS (ACL 2017), VOL 1, P1073, DOI 10.18653/v1/P17-1099.
+   Song Yan., 2018, 2018 C N AM CHAPT AS, V2, P175, DOI DOI 10.18653/V1/N18-2028.
+   Su J., 2022, ARXIV.
+   Tian Q, 2016, ISPRS INT GEO-INF, V5, DOI 10.3390/ijgi5050065.
+   Vaswani A, 2017, ADV NEUR IN, V30, DOI 10.1007/s11356-023-31437-0.
+   Wang RZ, 2021, FINDINGS OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS, ACL-IJCNLP 2021, P1405.
+   Yang QC, 2025, PROCEEDINGS OF THE 31ST ACM SIGKDD CONFERENCE ON KNOWLEDGE DISCOVERY AND DATA MINING V.1, KDD 2025, P2756, DOI 10.1145/3690624.3709425.
+   Ying Shen, 2019, Geomatics and Information Science of Wuhan University, V44, P302, DOI 10.13203/j.whugis20170072.
+   Zeng XR, 2018, PROCEEDINGS OF THE 56TH ANNUAL MEETING OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS (ACL), VOL 1, P506.
+   Zhang C, 2023, COMPUT ENVIRON URBAN, V100, DOI 10.1016/j.compenvurbsys.2022.101937.
+   Zhang HW, 2020, ISPRS INT J GEO-INF, V9, DOI 10.3390/ijgi9120745.
+   Zhang MW, 2023, APPL SCI-BASEL, V13, DOI 10.3390/app13179855.
+   Zhang XR, 2023, IEEE IJCNN, DOI 10.1109/IJCNN54540.2023.10191275.
+   {[}张雪英 ZHANG Xueying], 2010, 地球信息科学学报, V12, P9.},
+Number-of-Cited-References = {38},
+Times-Cited = {0},
+Usage-Count-Last-180-days = {6},
+Usage-Count-Since-2013 = {6},
+Journal-ISO = {Int. J. Digit. Earth},
+Doc-Delivery-Number = {FJ2RR},
+Web-of-Science-Index = {Science Citation Index Expanded (SCI-EXPANDED)},
+Unique-ID = {WOS:001720072300001},
+OA = {Green Submitted, gold},
+DA = {2026-05-06},
+}
+
+@article{ WOS:001383041800025,
+Author = {Suarez-Paniagua, Victor and Casey, Arlene and Marwick, Charis A. and
+   Burton, Jennifer K. and Callaby, Helen and Guthrie, Isobel and Guthrie,
+   Bruce and Alex, Beatrice},
+Title = {Care home resident identification: A comparison of address matching
+   methods with Natural Language Processing},
+Journal = {PLOS ONE},
+Year = {2024},
+Volume = {19},
+Number = {12},
+Month = {DEC 5},
+Abstract = {Background
+   Care home residents are a highly vulnerable group, but identifying care
+   home residents in routine data is challenging. This study aimed to
+   develop and validate Natural Language Processing (NLP) methods to
+   identify care home residents from primary care address records.
+   Methods
+   The proposed system applies an NLP sequential filtering and
+   preprocessing of text, then the calculation of similarity scores between
+   general practice (GP) addresses and care home registered addresses.
+   Performance was evaluated in a diagnostic test study comparing NLP
+   prediction to independent, gold-standard manual identification of care
+   home addresses. The analysis used population data for 771,588 uniquely
+   written addresses for 819,911 people in two NHS Scotland health board
+   regions. The source code is publicly available at
+   https://github.com/vsuarezpaniagua/NLPcarehome.
+   Results
+   Care home resident identification by NLP methods overall was better in
+   Fife than in Tayside, and better in the over-65s than in the whole
+   population. Methods with the best performance were Correlation
+   (sensitivity 90.2\%, PPV 92.0\%) for Fife data and Cosine (sensitivity
+   90.4\%, PPV 93.7\%) for Tayside. For people aged >= 65 years, the best
+   methods were Jensen-Shannon (sensitivity 91.5\%, PPV 98.7\%) for Fife
+   and City Block (sensitivity 94.4\%, PPV 98.3\%) for Tayside. These
+   results show the feasibility of applying NLP methods to real data
+   concluding that computing address similarities outperforms previous
+   works.
+   Conclusions
+   Address-matching techniques using NLP methods can determine with
+   reasonable accuracy if individuals live in a care home based on their
+   GP-registered addresses. The performance of the system exceeds
+   previously reported results such as Postcode matching, Markov score or
+   Phonics score.},
+Publisher = {PUBLIC LIBRARY SCIENCE},
+Address = {1160 BATTERY STREET, STE 100, SAN FRANCISCO, CA 94111 USA},
+Type = {Article},
+Language = {English},
+Affiliation = {Suárez-Paniagua, V (Corresponding Author), Univ Edinburgh, Adv Care Res Ctr, Usher Inst Populat Hlth Sci \& Informat, Edinburgh, Midlothian, Scotland.
+   Suárez-Paniagua, V (Corresponding Author), HDR UK, Hlth Data Res UK, London, England.
+   Suarez-Paniagua, Victor; Casey, Arlene; Guthrie, Bruce; Alex, Beatrice, Univ Edinburgh, Adv Care Res Ctr, Usher Inst Populat Hlth Sci \& Informat, Edinburgh, Midlothian, Scotland.
+   Suarez-Paniagua, Victor, HDR UK, Hlth Data Res UK, London, England.
+   Marwick, Charis A., Univ Dundee, Sch Med, Populat Hlth \& Genom Div, Dundee, Scotland.
+   Burton, Jennifer K., Univ Glasgow, Sch Cardiovasc \& Metab Hlth, Glasgow, Lanark, Scotland.
+   Callaby, Helen, NHS Grampian, Aberdeen, Scotland.
+   Guthrie, Isobel, Univ St Andrews, Sch Biol, Biomed Sci Res Complex, St Andrews, Fife, Scotland.
+   Alex, Beatrice, Univ Edinburgh, Sch Literatures Languages \& Cultures LLC, Edinburgh, Midlothian, Scotland.
+   Alex, Beatrice, Univ Edinburgh, Edinburgh Futures Inst, Edinburgh, Midlothian, Scotland.},
+DOI = {10.1371/journal.pone.0309341},
+Article-Number = {e0309341},
+ISSN = {1932-6203},
+Keywords-Plus = {COVID-19; ADMISSIONS; OUTBREAKS; COHORT; UK},
+Research-Areas = {Science \& Technology - Other Topics},
+Web-of-Science-Categories  = {Multidisciplinary Sciences},
+Author-Email = {vsuarez@ed.ac.uk},
+Affiliations = {University of Edinburgh; University of Dundee; University of Glasgow;
+   University of St Andrews; University of Edinburgh; University of
+   Edinburgh},
+ResearcherID-Numbers = {Marwick, Charis/O-5478-2014},
+ORCID-Numbers = {Burton, Jennifer Kirsty/0000-0002-4752-6988
+   Callaby, Helen/0009-0005-1458-4857
+   Marwick, Charis/0000-0003-2488-2362},
+Funding-Acknowledgement = {General PLC; Health Data Research UK National Text Analytics
+   Implementation Project {[}PIII029]},
+Funding-Text = {This work was funded by Legal and General PLC (a research grant to
+   establish the independent Advanced Care Research Centre at the
+   University of Edinburgh). The funder had no role in the conduct of the
+   study, interpretation, or the decision to submit for publication. The
+   views expressed are those of the authors and not necessarily those of
+   Legal and General PLC. The work was additionally supported by the Health
+   Data Research UK National Text Analytics Implementation Project,
+   Wellcome Institutional Translation Partnership Awards (PIII029).},
+Cited-References = {BRAY JR, 1957, ECOL MONOGR, V27, P326, DOI 10.2307/1942268.
+   Burton JK, 2020, INT J POPUL DATA SCI, V5, DOI 10.23889/ijpds.v5i4.1391.
+   Burton JK, 2020, LANCET HEALTH LONGEV, V1, pE21, DOI 10.1016/S2666-7568(20)30012-X.
+   Burton JK, 2019, AGE AGEING, V48, P114, DOI 10.1093/ageing/afy137.
+   Burton JK, 2021, AGE AGEING, V50, P1482, DOI 10.1093/ageing/afab099.
+   Burton JK, 2018, AGE AGEING, V47, P322, DOI 10.1093/ageing/afx200.
+   Care inspectorate, About us.
+   DAMERAU FJ, 1964, COMMUN ACM, V7, P171, DOI 10.1145/363958.363994.
+   Emmerson C, 2021, INFLUENZA OTHER RESP, V15, P371, DOI 10.1111/irv.12831.
+   GOV, UK-Bulk Data Transfer.
+   Hanratty B, 2020, BMJ-BRIT MED J, V369, DOI 10.1136/bmj.m2463.
+   Harper G, 2021, INT J POPUL DATA SCI, V6, DOI 10.23889/ijpds.v6i1.1674.
+   Hollinghurst J, 2021, AGE AGEING, V50, P25, DOI 10.1093/ageing/afaa207.
+   Housley G, 2018, AGE AGEING, V47, P387, DOI 10.1093/ageing/afx182.
+   JARO MA, 1989, J AM STAT ASSOC, V84, P414, DOI 10.2307/2289924.
+   Kondrak G, 2005, LECT NOTES COMPUT SC, V3772, P115.
+   Kullback S., 1951, ANN MATH STAT, V22, P79, DOI 10.1214/aoms/1177729694.
+   LANCE GN, 1967, COMPUT J, V9, P373, DOI 10.1093/comjnl/9.4.373.
+   Levenshtein V.I., 1965, Soviet Physics Doklady, V10.
+   Moore DC, 2013, AGE AGEING, V42, P798, DOI 10.1093/ageing/aft125.
+   Nils Reimers, 2019, P 2019 C EMPIRICAL M.
+   ordnancesurvey, 2023, AddressBase Premium.
+   Pearson K., Proc. R. Soc. London, V58, P240, DOI {[}10.1098/rspl.1895.0041, DOI 10.1098/RSPL.1895.0041].
+   Public Health Scotland University of Edinburgh University of Glasgow, 2021, Discharges from NHSScotland hospitals to care homes between 1 March and 31 May 2020: A Management Information Statistics publication for Scotland.
+   Santos F, 2020, INT J POPUL DATA SCI, V5, DOI 10.23889/ijpds.v5i4.1666.
+   Schultze Anna, 2021, Wellcome Open Res, V6, P90, DOI {[}10.12688/wellcomeopenres.16737.1, 10.12688/wellcomeopenres.16737.1].
+   Sherlaw-Johnson C, 2016, AGE AGEING, V45, P71, DOI 10.1093/ageing/afv158.
+   The care quality Commission (CQC), US.
+   Winkler W. E., 1990, Proceedings of the Section on Survey Research, V354359.
+   Zhang HY, 2023, FRONT DIGIT HEALTH, V5, DOI 10.3389/fdgth.2023.1186208.},
+Number-of-Cited-References = {30},
+Times-Cited = {1},
+Usage-Count-Last-180-days = {1},
+Usage-Count-Since-2013 = {1},
+Journal-ISO = {PLoS One},
+Doc-Delivery-Number = {Q2K7C},
+Web-of-Science-Index = {Science Citation Index Expanded (SCI-EXPANDED)},
+Unique-ID = {WOS:001383041800025},
+OA = {Green Submitted, gold},
+DA = {2026-05-06},
+}
+
+@article{ WOS:001038504800001,
+Author = {Ling, Guangming and Mu, Xiaofeng and Wang, Chao and Xu, Aiping},
+Title = {Enhancing Chinese Address Parsing in Low-Resource Scenarios through
+   In-Context Learning},
+Journal = {ISPRS INTERNATIONAL JOURNAL OF GEO-INFORMATION},
+Year = {2023},
+Volume = {12},
+Number = {7},
+Month = {JUL},
+Abstract = {Address parsing is a crucial task in natural language processing,
+   particularly for Chinese addresses. The complex structure and semantic
+   features of Chinese addresses present challenges due to their inherent
+   ambiguity. Additionally, different task scenarios require varying levels
+   of granularity in address components, further complicating the parsing
+   process. To address these challenges and adapt to low-resource
+   environments, we propose CapICL, a novel Chinese address parsing model
+   based on the In-Context Learning (ICL) framework. CapICL leverages a
+   sequence generator, regular expression matching, BERT semantic
+   similarity computation, and Generative Pre-trained Transformer (GPT)
+   modeling to enhance parsing accuracy by incorporating contextual
+   information. We construct the sequence generator using a small annotated
+   dataset, capturing distribution patterns and boundary features of
+   address types to model address structure and semantics, which mitigates
+   interference from unnecessary variations. We introduce the REB-KNN
+   algorithm, which selects similar samples for ICL-based parsing using
+   regular expression matching and BERT semantic similarity computation.
+   The selected samples, raw text, and explanatory text are combined to
+   form prompts and inputted into the GPT model for prediction and address
+   parsing. Experimental results demonstrate significant achievements of
+   CapICL in low-resource environments, reducing dependency on annotated
+   data and computational resources. Our model's effectiveness,
+   adaptability, and broad application potential are validated, showcasing
+   its positive impact in natural language processing and geographical
+   information systems.},
+Publisher = {MDPI},
+Address = {MDPI AG, Grosspeteranlage 5, CH-4052 BASEL, SWITZERLAND},
+Type = {Article},
+Language = {English},
+Affiliation = {Xu, AP (Corresponding Author), Wuhan Univ, Sch Comp Sci, Wuhan 430072, Peoples R China.
+   Ling, Guangming; Mu, Xiaofeng; Xu, Aiping, Wuhan Univ, Sch Comp Sci, Wuhan 430072, Peoples R China.
+   Mu, Xiaofeng, Huazhong Univ Sci \& Technol, Wuhan Childrens Hosp, Wuhan Maternal \& Child Healthcare Hosp, Tongji Med Coll, Wuhan 430074, Peoples R China.
+   Wang, Chao, Wuhan Univ, State Key Lab Informat Engn Surveying Mapping \& Re, Wuhan 430072, Peoples R China.},
+DOI = {10.3390/ijgi12070296},
+Article-Number = {296},
+EISSN = {2220-9964},
+Keywords = {Chinese address parsing; low-resource scenarios; In-Context Learning;
+   GPT; BERT; K-Nearest Neighbor},
+Research-Areas = {Computer Science; Physical Geography; Remote Sensing},
+Web-of-Science-Categories  = {Computer Science, Information Systems; Geography, Physical; Remote
+   Sensing},
+Author-Email = {xuaiping@whu.edu.cn},
+Affiliations = {Wuhan University; Huazhong University of Science \& Technology; Wuhan
+   University},
+ORCID-Numbers = {Ling, Guangming/0000-0001-8263-4215
+   Mu, Xiaofeng/0000-0003-0780-0812},
+Funding-Acknowledgement = {National Key Ramp;D Program of China {[}2018YFB2100603]; Key Ramp;D
+   Program of Hubei Province {[}2022BAA048]; National Natural Science
+   Foundation of China program {[}41890822]; Open Fund of National
+   Engineering Research Centre for Geographic Information System, China
+   University of Geosciences, Wuhan , China;  {[}2022KFJJ07]},
+Funding-Text = {This research was funded by the National Key R\&D Program of China (No.
+   2018YFB2100603), the Key R\&D Program of Hubei Province (No.
+   2022BAA048), the National Natural Science Foundation of China program
+   (No. 41890822), and the Open Fund of National Engineering Research
+   Centre for Geographic Information System, China University of
+   Geosciences, Wuhan 430074, China (No. 2022KFJJ07). The numerical
+   calculations in this paper were performed on the super-computing system
+   in the Supercomputing Centre of Wuhan University.},
+Cited-References = {Berragan C, 2023, INT J GEOGR INF SCI, V37, P747, DOI 10.1080/13658816.2022.2133125.
+   Brown TB, 2020, ADV NEUR IN, V33.
+   Chen JW, 2022, PROCEEDINGS OF THE 60TH ANNUAL MEETING OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS (ACL 2022), VOL 1: (LONG PAPERS), P5711.
+   Chowdhery Aakanksha, 2022, arXiv.
+   Ferguson KD, 2020, INT J EPIDEMIOL, V49, P322, DOI 10.1093/ije/dyz150.
+   Gao TY, 2021, 59TH ANNUAL MEETING OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS AND THE 11TH INTERNATIONAL JOINT CONFERENCE ON NATURAL LANGUAGE PROCESSING (ACL-IJCNLP 2021), VOL 1, P3816.
+   Gritta M, 2020, LANG RESOUR EVAL, V54, P683, DOI 10.1007/s10579-019-09475-3.
+   Han CC, 2023, Arxiv, DOI arXiv:2302.07739.
+   Hedderich MA, 2021, 2021 CONFERENCE OF THE NORTH AMERICAN CHAPTER OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS: HUMAN LANGUAGE TECHNOLOGIES (NAACL-HLT 2021), P2545.
+   Hu XK, 2023, LECT NOTES COMPUT SC, V13982, P398, DOI 10.1007/978-3-031-28241-6\_44.
+   Karimzadeh M, 2019, T GIS, V23, P118, DOI 10.1111/tgis.12510.
+   Li H, 2019, 2019 CONFERENCE OF THE NORTH AMERICAN CHAPTER OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS: HUMAN LANGUAGE TECHNOLOGIES (NAACL HLT 2019), VOL. 1, P3421.
+   Ling GM, 2023, APPL INTELL, V53, P6856, DOI 10.1007/s10489-022-03511-6.
+   {[}凌广明 Ling Guangming], 2020, {[}电子学报, Acta Electronica Sinica], V48, P2081.
+   Liu JC, 2022, PROCEEDINGS OF DEEP LEARNING INSIDE OUT (DEELIO 2022): THE 3RD WORKSHOP ON KNOWLEDGE EXTRACTION AND INTEGRATION FOR DEEP LEARNING ARCHITECTURES, P100.
+   Liu PF, 2023, ACM COMPUT SURV, V55, DOI 10.1145/3560815.
+   Liu Wei, 2021, P 59 ANN M ASS COMP, V1, P5847, DOI DOI 10.18653/V1/2021.ACL-LONG.454.
+   Lu Y, 2022, PROCEEDINGS OF THE 60TH ANNUAL MEETING OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS (ACL 2022), VOL 1: (LONG PAPERS), P8086.
+   Ma K, 2022, J GEOGR SYST, V24, P143, DOI 10.1007/s10109-022-00375-9.
+   Min Sewon., 2022, arXiv, DOI arXiv:2202.12837.
+   Petroni F, 2019, 2019 CONFERENCE ON EMPIRICAL METHODS IN NATURAL LANGUAGE PROCESSING AND THE 9TH INTERNATIONAL JOINT CONFERENCE ON NATURAL LANGUAGE PROCESSING (EMNLP-IJCNLP 2019), P2463.
+   Radford Alec., 2019, OPENAI BLOG.
+   Reimers N, 2020, PROCEEDINGS OF THE 2020 CONFERENCE ON EMPIRICAL METHODS IN NATURAL LANGUAGE PROCESSING (EMNLP), P4512.
+   Reimers N, 2019, 2019 CONFERENCE ON EMPIRICAL METHODS IN NATURAL LANGUAGE PROCESSING AND THE 9TH INTERNATIONAL JOINT CONFERENCE ON NATURAL LANGUAGE PROCESSING (EMNLP-IJCNLP 2019), P3982.
+   Schick T, 2021, 2021 CONFERENCE OF THE NORTH AMERICAN CHAPTER OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS: HUMAN LANGUAGE TECHNOLOGIES (NAACL-HLT 2021), P2339.
+   Shen WZ, 2021, 59TH ANNUAL MEETING OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS AND THE 11TH INTERNATIONAL JOINT CONFERENCE ON NATURAL LANGUAGE PROCESSING, VOL 1 (ACL-IJCNLP 2021), P1551.
+   Stock K, 2018, INT J GEOGR INF SCI, V32, P1087, DOI 10.1080/13658816.2018.1432861.
+   Sun TX, 2022, PR MACH LEARN RES.
+   Tao LF, 2022, ISPRS INT J GEO-INF, V11, DOI 10.3390/ijgi11120598.
+   Tennant PWG, 2021, INT J EPIDEMIOL, V50, P620, DOI 10.1093/ije/dyaa213.
+   Wang JM, 2020, T GIS, V24, P719, DOI 10.1111/tgis.12627.
+   Wei JS, 2022, ADV NEUR IN.
+   Wu Z., 2022, Self-adaptive in-context learning, DOI arXiv:2212.10375.
+   {[}张红伟 Zhang Hongwei], 2022, {[}武汉大学学报. 信息科学版, Geomatics and Information Science of Wuhan University], V47, P665.
+   Zhao TZ, 2021, PR MACH LEARN RES, V139.
+   Zhou B, 2023, Arxiv, DOI {[}arXiv:2301.13631, 10.48550/arXiv.2301.13631, DOI 10.48550/ARXIV.2301.13631].},
+Number-of-Cited-References = {36},
+Times-Cited = {5},
+Usage-Count-Last-180-days = {7},
+Usage-Count-Since-2013 = {35},
+Journal-ISO = {ISPRS Int. J. Geo-Inf.},
+Doc-Delivery-Number = {N7AV4},
+Web-of-Science-Index = {Science Citation Index Expanded (SCI-EXPANDED)},
+Unique-ID = {WOS:001038504800001},
+OA = {Green Submitted, gold},
+DA = {2026-05-06},
+}
+
+@article{ WOS:001062630300001,
+Author = {Zhang, Mengwei and Liu, Xingui and Ma, Jingzhen and Zhang, Zheng and
+   Qiu, Yue and Jiang, Zhipeng},
+Title = {Non-Standard Address Parsing in Chinese Based on Integrated CHTopoNER
+   Model and Dynamic Finite State Machine},
+Journal = {APPLIED SCIENCES-BASEL},
+Year = {2023},
+Volume = {13},
+Number = {17},
+Month = {SEP},
+Abstract = {Information in non-standard address texts in Chinese is usually
+   presented with rough content, complex and diverse presentation forms,
+   and inconsistent hierarchical granularity, causing low accuracy in
+   Chinese address parsing. Therefore, we propose a method for parsing
+   non-standard address text in Chinese that integrates the Chinese Toponym
+   Named Entity Recognition (CHTopoNER) model and a dynamic finite state
+   machine (FSM). First, named entity recognition is performed by the
+   CHTopoNER model. Sets of dynamic FSMs are then constructed based on the
+   address hierarchical characteristics to sort and combine the Chinese
+   address elements, thereby achieving address parsing on the Chinese
+   internet. This method showed excellent accuracy in parsing both standard
+   and non-standard placename addresses. In particular, this method
+   performed better in address parsing for disordered or missing
+   hierarchical elements than traditional methods using an FSM.
+   Specifically, this method achieved accuracies of 96.6\% and 96.8\% for
+   standard and non-standard placenames, respectively. These accuracies
+   increased by 8.0\% and 57.1\%, respectively, compared with the
+   integrated CHTopoNER model and traditional FSM, and by 7.4\% and 19.8\%,
+   respectively, compared with the integrated CHTopoNER model and
+   bidirectional FSM. After analysis, the address-parsing method showed
+   good scalability and adaptability, which could be applied to various
+   types of address-parsing tasks.},
+Publisher = {MDPI},
+Address = {MDPI AG, Grosspeteranlage 5, CH-4052 BASEL, SWITZERLAND},
+Type = {Article},
+Language = {English},
+Affiliation = {Liu, XG (Corresponding Author), Informat Engn Univ, Inst Geospatial Informat, Zhengzhou 450001, Peoples R China.
+   Zhang, Mengwei; Liu, Xingui; Ma, Jingzhen; Zhang, Zheng; Qiu, Yue; Jiang, Zhipeng, Informat Engn Univ, Inst Geospatial Informat, Zhengzhou 450001, Peoples R China.},
+DOI = {10.3390/app13179855},
+Article-Number = {9855},
+EISSN = {2076-3417},
+Keywords = {Chinese address parsing; CHTopoNER model; finite state machine; dynamic
+   finite state machine; Chinese internet text},
+Research-Areas = {Chemistry; Engineering; Materials Science; Physics},
+Web-of-Science-Categories  = {Chemistry, Multidisciplinary; Engineering, Multidisciplinary; Materials
+   Science, Multidisciplinary; Physics, Applied},
+Author-Email = {zmweiwei1999@163.com
+   a9812260211@126.com
+   zb50mjz@163.com
+   giser\_zzy@163.com
+   qiuyue@whu.edu.cn
+   jiangzp0803@163.com},
+Affiliations = {PLA Information Engineering University},
+ResearcherID-Numbers = {zheng, zhang/JZE-3392-2024
+   Mengwei, Zhang/JNE-5820-2023},
+ORCID-Numbers = {MA, Jingzhen/0000-0002-2195-0131
+   Qiu, Yue/0000-0002-4984-4920
+   },
+Funding-Acknowledgement = {Collaborative Innovation Center of Geo-Information Technology for Smart
+   Central Plains, Henan Province {[}42101454]; Key Laboratory of
+   Spatiotemporal Perception and Intelligent processing, Ministry of
+   Natural Resources {[}212102]; National Natural Science Foundation of
+   China {[}212102]},
+Funding-Text = {This research was funded by Joint Fund of Collaborative Innovation
+   Center of Geo-Information Technology for Smart Central Plains, Henan
+   Province and Key Laboratory of Spatiotemporal Perception and Intelligent
+   processing, Ministry of Natural Resources, grant number 212102; and
+   National Natural Science Foundation of China, grant number 42101454.},
+Cited-References = {Bihui Yu, 2020, Proceedings of the 2020 IEEE 2nd International Conference on Civil Aviation Safety and Information Technology (ICCASIT), P542, DOI 10.1109/ICCASIT50869.2020.9368795.
+   {[}程博 Cheng Bo], 2019, {[}地球信息科学学报, Journal of Geo-Information Science], V21, P1143.
+   Devlin J, 2019, Arxiv, DOI {[}arXiv:1810.04805, 10.48550/arXiv.1810.04805].
+   Feng Zhu, 2018, Journal of Physics: Conference Series, V1087, DOI {[}10.1088/1742-6596/1087/5/052040, 10.1088/1742-6596/1087/5/052040].
+   Graves A, 2013, INT CONF ACOUST SPEE, P6645, DOI 10.1109/ICASSP.2013.6638947.
+   Grishman Ralph., 1996, COLING 96, DOI DOI 10.3115/992628.992709.
+   Gu J., 2016, Ph.D. Dissertation.
+   Guo Y.C., 2017, Masters Thesis.
+   Hong Y., 2008, Masters Thesis.
+   Hu XK, 2023, LECT NOTES COMPUT SC, V13982, P398, DOI 10.1007/978-3-031-28241-6\_44.
+   Jaderberg M, 2015, Arxiv, DOI arXiv:1412.5903.
+   Ji SX, 2022, IEEE T NEUR NET LEAR, V33, P494, DOI 10.1109/TNNLS.2021.3070843.
+   Jian R.J., 2015, Masters Thesis.
+   Kang M., 2015, ACTA GEODAETICA CART, V44, P99, DOI DOI 10.11947/J.AGCS.2015.20130205.
+   Lafferty JohnD., 2001, P INT C MACHINE LEAR.
+   Lee D, 1996, P IEEE, V84, P1090, DOI 10.1109/5.533956.
+   Levow G.-A., 2006, {[}No title captured], P108.
+   Li H, 2019, 2019 CONFERENCE OF THE NORTH AMERICAN CHAPTER OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS: HUMAN LANGUAGE TECHNOLOGIES (NAACL HLT 2019), VOL. 1, P3421.
+   Li J., 2019, China Medical Equipment, V34, P112.
+   Li P.P., 2019, Masters Thesis..
+   Li XY, 2020, J BIOMED INFORM, V107, DOI 10.1016/j.jbi.2020.103422.
+   Lilleberg J, 2015, PROCEEDINGS OF 2015 IEEE 14TH INTERNATIONAL CONFERENCE ON COGNITIVE INFORMATICS \& COGNITIVE COMPUTING (ICCI{*}CC), P136, DOI 10.1109/ICCI-CC.2015.7259377.
+   Lin Y, 2021, ENVIRON PLAN B-URBAN, V48, P724, DOI 10.1177/2399808319895272.
+   Ling GM, 2023, ISPRS INT J GEO-INF, V12, DOI 10.3390/ijgi12070296.
+   {[}刘现印 Liu Xianyin], 2021, {[}测绘科学, Science of Surveying and Mapping], V46, P165.
+   Liu YH, 2019, Arxiv, DOI arXiv:1907.11692.
+   {[}罗明 Luo Ming], 2016, {[}计算机应用研究, Application Research of Computers], V33, P3691.
+   Ma M., 2016, Study on Key Techniques of Data Organization for Spatiotemporal Information of Internet News.
+   Ma RT, 2020, Arxiv, DOI arXiv:1908.05969.
+   Mao R.C., 2019, Ph.D. Thesis.
+   Melo F, 2017, T GIS, V21, P3, DOI 10.1111/tgis.12212.
+   Pennington Jeffrey., 2014, P 2014 C EMPIRICAL M, DOI {[}10.3115/v1/D14-1162, DOI 10.3115/V1/D14-1162].
+   Qiu QJ, 2019, EXPERT SYST APPL, V125, P157, DOI 10.1016/j.eswa.2019.02.001.
+   Quan Y.X., 2002, J. Intell, V11, P29.
+   {[}宋子辉 Song Zihui], 2013, {[}遥感学报, Journal of Remote Sensing], V17, P788.
+   Strubell E, 2017, Arxiv, DOI {[}arXiv:1702.02098, DOI 10.48550/ARXIV.1702.02098, 10.48550/arXiv.1702.02098].
+   Tan K.K., 2011, Masters Dissertation.
+   Tan T.C., 2013, Masters Thesis.
+   {[}唐旭日 Tang Xuri], 2010, {[}武汉大学学报. 信息科学版, Geomatics and Information Science of Wuhan University], V35, P930.
+   Tian Q, 2016, ISPRS INT GEO-INF, V5, DOI 10.3390/ijgi5050065.
+   Wang Y., 2016, Comput. Mod, V7, P60.
+   Wei Yong, 2018, Geomatics and Information Science of Wuhan University, V43, P17, DOI 10.13203/j.whugis20150538.
+   {[}吴恪涵 Wu Kehan], 2021, {[}地理与地理信息科学, Geography and Geo-information Science], V37, P10.
+   {[}叶鹏 Ye Peng], 2018, {[}地球信息科学学报, Journal of Geo-Information Science], V20, P880.
+   Yuan X.D., 2018, Masters Thesis.
+   Zhang H., 2021, Ph.D. Thesis, DOI {[}10.27245/d.cnki.gnjsu.2021.000214, DOI 10.27245/D.CNKI.GNJSU.2021.000214].
+   {[}张红伟 Zhang Hongwei], 2022, {[}武汉大学学报. 信息科学版, Geomatics and Information Science of Wuhan University], V47, P665.
+   Zhang SX, 2022, INT J COMPUT SCI ENG, V25, P479, DOI {[}10.1504/IJCSE.2022.10051194, 10.1504/IJCSE.2022.126251].
+   {[}张晓艳 Zhang Xiaoyan], 2005, {[}计算机科学, Computer Science], V32, P44.
+   {[}张雪英 ZHANG Xueying], 2010, 地球信息科学学报, V12, P9.
+   Zhao Y., 2017, Beijing Surv. Mapp, V5, P50, DOI DOI 10.19580/J.CNKI.1007-3000.2017.05.011.
+   Zhu J., 2013, Masters Thesis.
+   Zhu S.M., 2011, Masters Thesis.
+   Zhuang H.D., 2013, J. Fujian Comput, V29, P130.},
+Number-of-Cited-References = {54},
+Times-Cited = {3},
+Usage-Count-Last-180-days = {11},
+Usage-Count-Since-2013 = {27},
+Journal-ISO = {Appl. Sci.-Basel},
+Doc-Delivery-Number = {R2IJ9},
+Web-of-Science-Index = {Science Citation Index Expanded (SCI-EXPANDED)},
+Unique-ID = {WOS:001062630300001},
+OA = {Green Submitted, gold},
+DA = {2026-05-06},
+}
+
+@article{ WOS:000964919900004,
+Author = {Lin, You-Xuan},
+Title = {Adaptable address parser with active learning},
+Journal = {INTERNATIONAL JOURNAL OF DATA MINING MODELLING AND MANAGEMENT},
+Year = {2023},
+Volume = {15},
+Number = {1},
+Pages = {79-101},
+Abstract = {Address parsing, decomposing address strings to semantically meaningful
+   components, is a measure to convert unstructured or semi-structured
+   address data to structured one. Flexibility and variability in
+   real-world address formats make parser development a non-trivial task.
+   Even after all the time and effort dedicated to obtaining a capable
+   parser, updating or even re-training is required for out-of-domain data
+   and extra costs will be incurred. To minimise the cost of model building
+   and updating, this study experiments with active learning for model
+   training and adaptation. Models composed of character-level embedding
+   and recurrent neural networks are trained to parse address in Taiwan.
+   Results show that by active learning, 420 additional instances to the
+   training data are sufficient for a model to adapt itself to unfamiliar
+   data while its competence in the original domain is retained. This
+   suggests that active learning is helpful for model adaptation when data
+   labelling is expensive and restricted.},
+Publisher = {INDERSCIENCE ENTERPRISES LTD},
+Address = {WORLD TRADE CENTER BLDG, 29 ROUTE DE PRE-BOIS, CASE POSTALE 856, CH-1215
+   GENEVA, SWITZERLAND},
+Type = {Article},
+Language = {English},
+Affiliation = {Lin, YX (Corresponding Author), Natl Ctr Res Earthquake Engn, 200, Sec 3, Xinhai Rd, Taipei City 106219, Taiwan.
+   Lin, You-Xuan, Natl Ctr Res Earthquake Engn, 200, Sec 3, Xinhai Rd, Taipei City 106219, Taiwan.},
+DOI = {10.1504/IJDMMM.2023.129991},
+ISSN = {1759-1163},
+EISSN = {1759-1171},
+Keywords = {address parsing; record linkage; active learning; model adaptation;
+   recurrent neural network; RNN; address in Taiwan},
+Research-Areas = {Computer Science},
+Web-of-Science-Categories  = {Computer Science, Artificial Intelligence},
+Author-Email = {yxlin@narlabs.org.tw},
+Cited-References = {Abid N., 2018, Digital Image Computing: Techniques and Applications, P1.
+   Abrol S, 2013, INT J DATA MIN MODEL, V5, P57, DOI 10.1504/IJDMMM.2013.051923.
+   {[}Anonymous], 2005, P 20 NATL C ARTIFICI.
+   Chang CH, 2016, APPL INTELL, V44, P539, DOI 10.1007/s10489-015-0707-5.
+   Chiticariu Laura., 2013, EMNLP, P827.
+   Churches Tim, 2002, BMC Med Inform Decis Mak, V2, P9, DOI 10.1186/1472-6947-2-9.
+   Comber S, 2019, T GIS, V23, P334, DOI 10.1111/tgis.12522.
+   Craig H, 2019, 27TH ACM SIGSPATIAL INTERNATIONAL CONFERENCE ON ADVANCES IN GEOGRAPHIC INFORMATION SYSTEMS (ACM SIGSPATIAL GIS 2019), P424, DOI 10.1145/3347146.3359070.
+   Culotta Aron., 2004, P HLTNAACL 04, P109.
+   Devlin J, 2019, 2019 CONFERENCE OF THE NORTH AMERICAN CHAPTER OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS: HUMAN LANGUAGE TECHNOLOGIES (NAACL HLT 2019), VOL. 1, P4171.
+   Gal Y, 2017, PR MACH LEARN RES, V70.
+   Javidaneh A, 2020, ISPRS INT J GEO-INF, V9, DOI 10.3390/ijgi9050317.
+   Kong L., 2016, {[}No title captured], P1.
+   Lample G., 2016, P NAACL 2016.
+   Li H, 2021, APPL INTELL, V51, P3475, DOI 10.1007/s10489-020-01953-4.
+   Li P.H., 2019, CKIPTAGGER 0 1 0.
+   Lin Y.X., 2021, TAIW GEOGR INF SOC A.
+   Lin Y, 2020, INT J GEOGR INF SCI, V34, P559, DOI 10.1080/13658816.2019.1681431.
+   Matci DK, 2018, COMPUT ENVIRON URBAN, V70, P1, DOI 10.1016/j.compenvurbsys.2018.01.009.
+   Mikolov T., 2013, P INT C NEUR INFORM, P3111.
+   Mokhtari S, 2019, AAAI CONF ARTIF INTE, P9547.
+   Palaz D, 2013, Arxiv, DOI arXiv:1312.2137.
+   Settles B., 2008, EMNLP, P1070.
+   Settles B., 2011, JMLR WORKSHOP C P, V16, P1.
+   Settles Burr., 2010, University of Wisconsin, Madison, V52, P11.
+   Sharma S, 2018, IEEE INT C SEMANT CO, P123, DOI 10.1109/ICSC.2018.00026.
+   Shen Y., 2017, Learning, P252.
+   Sun J.Y., 2020, JIEBA.
+   Wang ML, 2016, INT CONF DAT MIN WOR, P225, DOI {[}10.1109/ICDMW.2016.0039, 10.1109/ICDMW.2016.44].
+   Waszczuk J, 2013, INT J DATA MIN MODEL, V5, P103, DOI 10.1504/IJDMMM.2013.053691.
+   Wing B. P., 2011, {[}No title captured], V1, P955.
+   Xu LC, 2020, COMPUT ENVIRON URBAN, V81, DOI 10.1016/j.compenvurbsys.2020.101473.
+   Yassine M, 2020, COLLOQ INF SCI TECH, P353, DOI {[}10.1109/CiSt49399.2021.9357170, 10.1109/CIST49399.2021.9357170].},
+Number-of-Cited-References = {33},
+Times-Cited = {0},
+Usage-Count-Last-180-days = {1},
+Usage-Count-Since-2013 = {2},
+Journal-ISO = {Int. J. Data Min. Model. Manag.},
+Doc-Delivery-Number = {C9GN1},
+Web-of-Science-Index = {Emerging Sources Citation Index (ESCI)},
+Unique-ID = {WOS:000964919900004},
+DA = {2026-05-06},
+}
+
+@article{ WOS:001451523900001,
+Author = {Yan, Xuefeng and Luo, An and Liu, Jiping and Wang, Yong and Zhang, Ya},
+Title = {Intelligent segmentation of Chinese address elements combining textual
+   and spatial semantic features},
+Journal = {INTERNATIONAL JOURNAL OF DIGITAL EARTH},
+Year = {2025},
+Volume = {18},
+Number = {1},
+Month = {DEC 31},
+Abstract = {Chinese address segmentation is a critical step in tasks such as address
+   parsing, address standardization, address matching, and geocoding.
+   However, existing research has largely overlooked the spatial
+   characteristics of address elements, thereby limiting the potential for
+   further performance enhancement. This paper integrates both textual and
+   spatial semantic features and proposes a framework for intelligent
+   segmentation of Chinese addresses via multi-semantic features
+   (FISCA-MS). The framework leverages the pooled output of the pretrained
+   language model MacBERT to represent the textual semantic features of
+   address elements and introduces a novel full-scale clustering evaluation
+   method (FSCE) to compute the spatial semantic features. By combining
+   textual and spatial semantic features, the proposed approach uses a
+   bidirectional gated recurrent unit (BiGRU) neural network to
+   automatically segment Chinese address elements. The experimental results
+   show that FISCA-MS outperforms FISCA, which uses only textual semantic
+   features (FISCA-TS), and FISCA, which uses only spatial semantic
+   features (FISCA-SS), with accuracy improvements of 0.725\% and 38.05\%,
+   respectively.},
+Publisher = {TAYLOR \& FRANCIS LTD},
+Address = {2-4 PARK SQUARE, MILTON PARK, ABINGDON OR14 4RN, OXON, ENGLAND},
+Type = {Article},
+Language = {English},
+Affiliation = {Luo, A; Liu, JP (Corresponding Author), Chinese Acad Surveying \& Mapping CASM, 28 Lianhuachi West Rd, Beijing 100036, Peoples R China.
+   Yan, Xuefeng; Luo, An; Liu, Jiping; Wang, Yong, Chinese Acad Surveying \& Mapping CASM, 28 Lianhuachi West Rd, Beijing 100036, Peoples R China.
+   Zhang, Ya, Minist Nat Resources, Inst Surveying \& Mapping Standardizat, Xian, Peoples R China.},
+DOI = {10.1080/17538947.2025.2481142},
+Article-Number = {2481142},
+ISSN = {1753-8947},
+EISSN = {1753-8955},
+Keywords = {Chinese address segmentation; Chinese address element; textual semantic
+   features; spatial semantic features; point set clustering},
+Research-Areas = {Physical Geography; Remote Sensing},
+Web-of-Science-Categories  = {Geography, Physical; Remote Sensing},
+Author-Email = {luoan@casm.ac.cn
+   liujp@casm.ac.cn},
+Affiliations = {Ministry of Natural Resources of the People's Republic of China},
+ResearcherID-Numbers = {Yan, Xuefeng/AAL-6948-2020},
+Funding-Acknowledgement = {National Key Research and Development Program of China
+   {[}2022YFC3005705]; Department of Natural Resources business project
+   {[}A2407]; National Natural Science Foundation of China {[}42371478]},
+Funding-Text = {This work was supported by the National Key Research and Development
+   Program of China under grant number 2022YFC3005705; Department of
+   Natural Resources business project under grant number A2407; and the
+   National Natural Science Foundation of China under grant number
+   42371478.},
+Cited-References = {Che WX, 2021, 2021 CONFERENCE ON EMPIRICAL METHODS IN NATURAL LANGUAGE PROCESSING (EMNLP 2021): PROCEEDINGS OF SYSTEM DEMONSTRATIONS, P42.
+   Cho Kyunghyun., 2014, arXiv Prepr. arXiv:1409.1259, DOI DOI 10.48550/ARXIV.1409.1259.
+   Cong G, 2016, SIGMOD'16: PROCEEDINGS OF THE 2016 INTERNATIONAL CONFERENCE ON MANAGEMENT OF DATA, P2207, DOI 10.1145/2882903.2912572.
+   Devlin J, 2019, Arxiv, DOI {[}arXiv:1810.04805, 10.48550/arXiv.1810.04805].
+   Goldberg DW, 2011, T GIS, V15, P727, DOI 10.1111/j.1467-9671.2011.01298.x.
+   Guo Daya, 2025, ARXIV, DOI DOI 10.48550/ARXIV.2501.12948.
+   He H, 2021, 2021 CONFERENCE ON EMPIRICAL METHODS IN NATURAL LANGUAGE PROCESSING (EMNLP 2021), P5555.
+   Hu XK, 2026, INT J GEOGR INF SCI, V40, P670, DOI 10.1080/13658816.2024.2405182.
+   Hu YJ, 2019, INT J GEOGR INF SCI, V33, P714, DOI 10.1080/13658816.2018.1458986.
+   Kang M., 2015, ACTA GEODAETICA CART, V44, P99, DOI DOI 10.11947/J.AGCS.2015.20130205.
+   Kuai X, 2020, ISPRS INT J GEO-INF, V9, DOI 10.3390/ijgi9030147.
+   Li H, 2019, 2019 CONFERENCE OF THE NORTH AMERICAN CHAPTER OF THE ASSOCIATION FOR COMPUTATIONAL LINGUISTICS: HUMAN LANGUAGE TECHNOLOGIES (NAACL HLT 2019), VOL. 1, P3421.
+   Li LM, 2020, Arxiv, DOI {[}arXiv:1810.05934, 10.48550/arXiv.1810.05934, DOI 10.48550/ARXIV.1810.05934].
+   Li L, 2018, INT J GEOGR INF SCI, V32, P30, DOI 10.1080/13658816.2017.1379084.
+   Li PP, 2020, ISPRS INT J GEO-INF, V9, DOI 10.3390/ijgi9110635.
+   Li ZG, 2009, COMPUT LINGUIST, V35, P505, DOI 10.1162/coli.2009.35.4.35403.
+   Luo Ruixuan., 2019, Pkuseg: A toolkit for multi-domain chinese word segmentation, DOI {[}arXiv:1906.11455, DOI 10.48550/ARXIV.1906.11455].
+   Qiu QJ, 2024, INT J DIGIT EARTH, V17, DOI 10.1080/17538947.2024.2353111.
+   Rattenbury Tye, 2007, 30th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval, P103, DOI 10.1145/1277741.1277762.
+   Sutton C, 2012, FOUND TRENDS MACH LE, V4, P267, DOI 10.1561/2200000013.
+   Wei W., 2022, Doctoral diss, DOI {[}https://doi.org/10.27379/d.cnki.gwhdu.2019.001586, DOI 10.27379/D.CNKI.GWHDU.2019.001586].
+   Ying Shen, 2019, Geomatics and Information Science of Wuhan University, V44, P302, DOI 10.13203/j.whugis20170072.
+   Zandbergen PA, 2008, COMPUT ENVIRON URBAN, V32, P214, DOI 10.1016/j.compenvurbsys.2007.11.006.
+   Zhang C, 2023, COMPUT ENVIRON URBAN, V100, DOI 10.1016/j.compenvurbsys.2022.101937.
+   {[}张红伟 Zhang Hongwei], 2022, {[}武汉大学学报. 信息科学版, Geomatics and Information Science of Wuhan University], V47, P665.
+   {[}张雪英 ZHANG Xueying], 2010, 地球信息科学学报, V12, P9.},
+Number-of-Cited-References = {26},
+Times-Cited = {0},
+Usage-Count-Last-180-days = {10},
+Usage-Count-Since-2013 = {27},
+Journal-ISO = {Int. J. Digit. Earth},
+Doc-Delivery-Number = {0NK8N},
+Web-of-Science-Index = {Science Citation Index Expanded (SCI-EXPANDED)},
+Unique-ID = {WOS:001451523900001},
+OA = {Green Submitted, gold},
+DA = {2026-05-06},
+}
